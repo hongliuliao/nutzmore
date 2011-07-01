@@ -3,7 +3,6 @@
  */
 package org.nutz.dao.cache.method;
 
-import org.nutz.dao.Condition;
 import org.nutz.dao.cache.ObsArgClass;
 import org.nutz.dao.convent.utils.CommonUtils;
 

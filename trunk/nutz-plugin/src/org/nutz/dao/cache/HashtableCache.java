@@ -3,7 +3,6 @@ package org.nutz.dao.cache;
 
 import java.util.Collections;
 import java.util.Hashtable;
-
 import java.util.Map;
 
 /**
@@ -35,6 +34,7 @@ public class HashtableCache implements Cache {
 		put(key, value);
 	}
 	
+	@SuppressWarnings("unchecked")
 	public void put(Object key, Object value) {
 		hashtable.put(key, value);
 	}
@@ -79,6 +79,7 @@ public class HashtableCache implements Cache {
 		return 0;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public Map toMap() {
 		return Collections.unmodifiableMap(hashtable);
 	}

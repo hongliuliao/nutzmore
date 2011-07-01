@@ -8,10 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-import java.util.Map.Entry;
 
-import org.nutz.dao.Condition;
 import org.nutz.dao.Dao;
 import org.nutz.dao.convent.utils.CommonUtils;
 import org.nutz.dao.entity.Entity;
@@ -33,6 +30,7 @@ public class CacheStrategy{
 	 * @param obj 对象,必须要设置@Id,@name,@PK中至少一个
 	 * @return 生成的主键,现在采用是字符串的主键
 	 */
+	@SuppressWarnings("unchecked")
 	public <T> Object getKey(T obj){
 		Class<T> clazz=(Class<T>) obj.getClass();
 		String clazzName=clazz.getName();
@@ -56,6 +54,7 @@ public class CacheStrategy{
 	 * @param obj
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public <T> Object[] getAllKeys(T obj){
 		Class<T> clazz=(Class<T>) obj.getClass();
 		String clazzName=clazz.getName();
@@ -97,6 +96,7 @@ public class CacheStrategy{
 	public String getKey(String clazzName){
 		return clazzName+"#";
 	}
+	@SuppressWarnings("unchecked")
 	public String getClassNameByTableName(String tableName){
 		EntityHolder entities=(EntityHolder) CommonUtils.getProperty(dao, "entities");
 		Map<Class<?>, Entity<?>> mappings=(Map<Class<?>, Entity<?>>) CommonUtils.getProperty(entities, "mappings");

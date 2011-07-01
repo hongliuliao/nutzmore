@@ -270,6 +270,7 @@ public class EhCache implements Cache {
 		return cache.getDiskStoreSize();
 	}
 
+	@SuppressWarnings("unchecked")
 	public Map toMap() {
 		try {
 			Map result = new HashMap();

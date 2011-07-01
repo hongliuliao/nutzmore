@@ -5,11 +5,8 @@ package org.nutz.dao.cache;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Observable;
 
 import org.nutz.dao.Dao;
 import org.nutz.dao.cache.method.ClearMethodHandler;
@@ -19,9 +16,7 @@ import org.nutz.dao.cache.method.IDaoCacheMethodHandler;
 import org.nutz.dao.cache.method.InsertMethodHandler;
 import org.nutz.dao.cache.method.UpdateMethodHandler;
 import org.nutz.dao.convent.utils.CommonUtils;
-import org.nutz.dao.entity.EntityHolder;
 import org.nutz.dao.entity.EntityMaker;
-import org.nutz.dao.entity.Record;
 import org.nutz.dao.entity.impl.ConventionEntityMaker;
 
 /**
