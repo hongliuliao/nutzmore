@@ -6,8 +6,6 @@ package org.nutz.dao.cache.method;
 import java.util.Map;
 import java.util.Set;
 
-import org.nutz.dao.Chain;
-import org.nutz.dao.Condition;
 import org.nutz.dao.cache.Cache;
 import org.nutz.dao.cache.ObsArgClass;
 import org.nutz.dao.convent.utils.CommonUtils;
@@ -54,6 +52,7 @@ public class UpdateMethodHandler implements IDaoCacheMethodHandler {
 		String className=msg.getCacheStrategy().getClassNameByTableName(tableName);
 		 removeRelationObjByClassName(msg, className);
 	}
+	@SuppressWarnings("unchecked")
 	public static void removeRelationObjByClassName(ObsArgClass msg, String className) {
 		Cache cache=msg.getCache();
 		Map<Object, Object> cacheMap=cache.toMap();
